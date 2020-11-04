@@ -1,0 +1,21 @@
+MOS document:
+
+Autonomous Health Framework (AHF) - Including TFA and ORAchk/EXAChk (Doc ID 2550798.1)
+
+[root@ocihost-ktfe71 ~]# cd /home/oracle/dba_code/TFA/Binary/
+[root@ocihost-ktfe71 Binary]# ls -l
+[root@ocihost-ktfe71 Binary]# ./ahf_setup
+Do you want to install AHF at [/opt/oracle.ahf] ? [Y]|N : N
+Please Enter new AHF Location : /u02/opt/oracle.tfa
+Do you want to add AHF Notification Email IDs ? [Y]|N : N
+Do you want to install/upgrade AHF on Cluster Nodes ? [Y]|N : Y
+Is password same for all the nodes? [Y]|N : Y
+
+[root@ocihost-ktfe72 Binary]# ./ahf_setup
+Do you want to install AHF at [/opt/oracle.ahf] ? [Y]|N : N
+Please Enter new AHF Location : /u02/opt/oracle.tfa
+Do you want to add AHF Notification Email IDs ? [Y]|N : N
+Do you want to install/upgrade AHF on Cluster Nodes ? [Y]|N : Y
+Is password same for all the nodes? [Y]|N : Y
+
+
