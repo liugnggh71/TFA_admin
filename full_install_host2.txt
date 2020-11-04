@@ -1,0 +1,122 @@
+[root@bswexadbp01-rlmu82 Binary]# ./ahf_setup
+
+AHF Installer for Platform Linux Architecture x86_64
+
+AHF Installation Log : /tmp/ahf_install_202300_219148_2020_10_26-20_52_45.log
+
+Starting Autonomous Health Framework (AHF) Installation
+
+AHF Version: 20.2.3 Build Date: 202010121848
+
+Default AHF Location : /opt/oracle.ahf
+
+Do you want to install AHF at [/opt/oracle.ahf] ? [Y]|N : N
+
+Please Enter new AHF Location : /u02/opt/oracle.tfa
+
+AHF Location : /u02/opt/oracle.tfa/oracle.ahf
+
+AHF Data Directory stores diagnostic collections and metadata.
+AHF Data Directory requires at least 5GB (Recommended 10GB) of free space.
+
+Choose Data Directory from below options :
+
+1. /u01/app/grid [Free Space : 4824 MB]
+2. /u02/opt/oracle.tfa/oracle.ahf [Free Space : 417918 MB]
+3. Enter a different Location
+
+Choose Option [1 - 3] : 2
+
+AHF Data Directory : /u02/opt/oracle.tfa/oracle.ahf/data
+
+Do you want to add AHF Notification Email IDs ? [Y]|N : N
+
+AHF will also be installed/upgraded on these Cluster Nodes :
+
+1. bswexadbp01-rlmu81
+
+The AHF Location and AHF Data Directory must exist on the above nodes
+AHF Location : /u02/opt/oracle.tfa/oracle.ahf
+AHF Data Directory : /u02/opt/oracle.tfa/oracle.ahf/data
+
+Do you want to install/upgrade AHF on Cluster Nodes ? [Y]|N : Y
+
+Extracting AHF to /u02/opt/oracle.tfa/oracle.ahf
+
+Configuring TFA Services
+
+Discovering Nodes and Oracle Resources
+
+Not generating certificates as GI discovered
+
+Starting TFA Services
+Created symlink from /etc/systemd/system/multi-user.target.wants/oracle-tfa.service to /etc/systemd/system/oracle-tfa.service.
+Created symlink from /etc/systemd/system/graphical.target.wants/oracle-tfa.service to /etc/systemd/system/oracle-tfa.service.
+
+.----------------------------------------------------------------------------------------.
+| Host               | Status of TFA | PID    | Port | Version    | Build ID             |
++--------------------+---------------+--------+------+------------+----------------------+
+| bswexadbp01-rlmu82 | RUNNING       | 221242 | 5000 | 20.2.3.0.0 | 20230020201012184854 |
+'--------------------+---------------+--------+------+------------+----------------------'
+
+Running TFA Inventory...
+
+Adding default users to TFA Access list...
+
+.-------------------------------------------------------------------------------.
+|                          Summary of AHF Configuration                         |
++-----------------+-------------------------------------------------------------+
+| Parameter       | Value                                                       |
++-----------------+-------------------------------------------------------------+
+| AHF Location    | /u02/opt/oracle.tfa/oracle.ahf                              |
+| TFA Location    | /u02/opt/oracle.tfa/oracle.ahf/tfa                          |
+| Exachk Location | /u02/opt/oracle.tfa/oracle.ahf/exachk                       |
+| Data Directory  | /u02/opt/oracle.tfa/oracle.ahf/data                         |
+| Repository      | /u02/opt/oracle.tfa/oracle.ahf/data/repository              |
+| Diag Directory  | /u02/opt/oracle.tfa/oracle.ahf/data/bswexadbp01-rlmu82/diag |
+'-----------------+-------------------------------------------------------------'
+
+
+Starting exachk scheduler from AHF ...
+
+AHF install completed on bswexadbp01-rlmu82
+
+Installing AHF on Remote Nodes :
+
+AHF will be installed on bswexadbp01-rlmu81, Please wait.
+
+Please Enter the password for bswexadbp01-rlmu81 :
+
+Is password same for all the nodes? [Y]|N : Y
+
+Installing AHF on bswexadbp01-rlmu81 :
+
+[bswexadbp01-rlmu81] Copying AHF Installer
+
+[bswexadbp01-rlmu81] Running AHF Installer
+
+AHF binaries are available in /u02/opt/oracle.tfa/oracle.ahf/bin
+
+AHF is successfully installed
+
+Moving /tmp/ahf_install_202300_219148_2020_10_26-20_52_45.log to /u02/opt/oracle.tfa/oracle.ahf/data/bswexadbp01-rlmu82/diag/ahf/
+
+[root@bswexadbp01-rlmu82 Binary]# tfactl print status
+
+.-----------------------------------------------------------------------------------------------------------.
+| Host               | Status of TFA | PID    | Port | Version    | Build ID             | Inventory Status |
++--------------------+---------------+--------+------+------------+----------------------+------------------+
+| bswexadbp01-rlmu82 | RUNNING       | 226947 | 5000 | 20.2.3.0.0 | 20230020201012184854 | COMPLETE         |
+| bswexadbp01-rlmu81 | NOT RUNNING   | -      |      |            |                      |                  |
+'--------------------+---------------+--------+------+------------+----------------------+------------------'
+[root@bswexadbp01-rlmu82 Binary]# tfactl print status
+
+.-----------------------------------------------------------------------------------------------------------.
+| Host               | Status of TFA | PID    | Port | Version    | Build ID             | Inventory Status |
++--------------------+---------------+--------+------+------------+----------------------+------------------+
+| bswexadbp01-rlmu82 | RUNNING       | 226947 | 5000 | 20.2.3.0.0 | 20230020201012184854 | COMPLETE         |
+| bswexadbp01-rlmu81 | RUNNING       | 265270 | 5000 | 20.2.3.0.0 | 20230020201012184854 | COMPLETE         |
+'--------------------+---------------+--------+------+------------+----------------------+------------------'
+[root@bswexadbp01-rlmu82 Binary]#
+
+
