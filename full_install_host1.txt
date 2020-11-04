@@ -1,8 +1,8 @@
-[root@bswexadbp01-rlmu81 ~]# cd /home/oracle/dba_code/TFA/Binary/
-[root@bswexadbp01-rlmu81 Binary]# ls -l
+[root@ocihost-ktfe71 ~]# cd /home/oracle/dba_code/TFA/Binary/
+[root@ocihost-ktfe71 Binary]# ls -l
 total 405084
 -r-xr-xr-x 1 oracle dba 414800074 Oct 13 12:55 ahf_setup
-[root@bswexadbp01-rlmu81 Binary]# ./ahf_setup
+[root@ocihost-ktfe71 Binary]# ./ahf_setup
 
 AHF Installer for Platform Linux Architecture x86_64
 
@@ -37,7 +37,7 @@ Do you want to add AHF Notification Email IDs ? [Y]|N : N
 
 AHF will also be installed/upgraded on these Cluster Nodes :
 
-1. bswexadbp01-rlmu82
+1. ocihost-ktfe72
 
 The AHF Location and AHF Data Directory must exist on the above nodes
 AHF Location : /u02/opt/oracle.tfa/oracle.ahf
@@ -60,7 +60,7 @@ Created symlink from /etc/systemd/system/graphical.target.wants/oracle-tfa.servi
 .----------------------------------------------------------------------------------------.
 | Host               | Status of TFA | PID    | Port | Version    | Build ID             |
 +--------------------+---------------+--------+------+------------+----------------------+
-| bswexadbp01-rlmu81 | RUNNING       | 164018 | 5000 | 20.2.3.0.0 | 20230020201012184854 |
+| ocihost-ktfe71 | RUNNING       | 164018 | 5000 | 20.2.3.0.0 | 20230020201012184854 |
 '--------------------+---------------+--------+------+------------+----------------------'
 
 Running TFA Inventory...
@@ -77,33 +77,33 @@ Adding default users to TFA Access list...
 | Exachk Location | /u02/opt/oracle.tfa/oracle.ahf/exachk                       |
 | Data Directory  | /u02/opt/oracle.tfa/oracle.ahf/data                         |
 | Repository      | /u02/opt/oracle.tfa/oracle.ahf/data/repository              |
-| Diag Directory  | /u02/opt/oracle.tfa/oracle.ahf/data/bswexadbp01-rlmu81/diag |
+| Diag Directory  | /u02/opt/oracle.tfa/oracle.ahf/data/ocihost-ktfe71/diag |
 '-----------------+-------------------------------------------------------------'
 
 
 Starting exachk scheduler from AHF ...
 
-AHF install completed on bswexadbp01-rlmu81
+AHF install completed on ocihost-ktfe71
 
 Installing AHF on Remote Nodes :
 
-AHF will be installed on bswexadbp01-rlmu82, Please wait.
+AHF will be installed on ocihost-ktfe72, Please wait.
 
-Please Enter the password for bswexadbp01-rlmu82 :
+Please Enter the password for ocihost-ktfe72 :
 
 Is password same for all the nodes? [Y]|N : Y
 
-Installing AHF on bswexadbp01-rlmu82 :
+Installing AHF on ocihost-ktfe72 :
 
-[bswexadbp01-rlmu82] Copying AHF Installer
+[ocihost-ktfe72] Copying AHF Installer
 
-[bswexadbp01-rlmu82] Running AHF Installer
+[ocihost-ktfe72] Running AHF Installer
 
 AHF binaries are available in /u02/opt/oracle.tfa/oracle.ahf/bin
 
 AHF is successfully installed
 
-Moving /tmp/ahf_install_202300_157824_2020_10_26-20_32_32.log to /u02/opt/oracle.tfa/oracle.ahf/data/bswexadbp01-rlmu81/diag/ahf/
+Moving /tmp/ahf_install_202300_157824_2020_10_26-20_32_32.log to /u02/opt/oracle.tfa/oracle.ahf/data/ocihost-ktfe71/diag/ahf/
 
-[root@bswexadbp01-rlmu81 Binary]#
+[root@ocihost-ktfe71 Binary]#
 
